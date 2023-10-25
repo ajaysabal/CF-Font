@@ -1,0 +1,28 @@
+{
+    "name": "CF Font",
+    "version": "1.0.0",
+    "description": "Change Font Size in CodeForces Custom Editor",
+    "manifest_version": 3,
+    "author": "Ajay Sabal",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "CF Font",
+        "default_icon": "assets/icon.png"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://codeforces.com/*",
+                "https://codeforc.es/*"
+            ],
+            "js": [
+                "scripts/storage.js"
+            ]
+        }
+    ]
+}
